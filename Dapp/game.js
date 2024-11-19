@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 const cellSize = 25; // Hücre boyutu
 const width = 32; // Labirent genişliği (hücre sayısı)
 const height = 24; // Labirent yüksekliği (hücre sayısı)
-const gameDuration = 60;// Oyuncunun tamamlaması gereken süre (saniye)
+const gameDuration = 45;// Oyuncunun tamamlaması gereken süre (saniye)
 
 
 let skor = 0; // oyunucunun biriktirdiği skor
@@ -87,12 +87,14 @@ function drawTimer() {
     // Süre dolduysa oyunu bitir
     if (remainingTime <= 0) {
         alert('Süre doldu! Kaybettiniz!');
+        if (skor > 0);
+        skor--;
         resetGame(); // Oyunu yeniden başlat
+
     }
 }
 
 function skorsayma() {
-
 
     // Skoru ekrana yaz
     ctx.fillStyle = 'red';
